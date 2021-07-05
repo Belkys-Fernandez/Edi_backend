@@ -18,11 +18,14 @@ class ProductosController{
     }
     
     public  function retornarProductosDescripcion($request,$response,$args){
+        $json = $request->getBody();
+        $json_id = json_decode($json,true);
         $onjetoProducto=new Productos;
-        $descripcionProductos=$onjetoProducto->buscarDescripcionProducto($args['id_prod']);
+        $descripcionProductos=$onjetoProducto->buscarDescripcionProducto($json_id['id_producto']);
         $response->getBody()->write(json_encode($descripcionProductos));
         return $response;
     }
+
 }
 
 

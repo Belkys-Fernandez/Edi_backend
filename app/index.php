@@ -52,7 +52,7 @@ $app->group('/Productos', function (RouteCollectorProxy $group){
     $group->get('/listaProducto',\ProductosController::class.':retornarListaProductos');
     $group->get('/ProductosPorId/{Id}',\ProductosController::class.':retornarProductosPorId');
     //verificar con el prof.
-    $group->get('/ProductosPorId/{id_prod}/{categoria}',\ProductosController::class.':retornarProductosPorId');
+    $group->post('/ProductosPorId',\ProductosController::class.':retornarProductosPorId');
    
     /*
     $group->post('/registro',\UsuariosController::class.':retornarEstadoRegistro');
