@@ -26,6 +26,25 @@ class ProductosController{
         return $response;
     }
 
+    public  function retornarEliminacion($request,$response,$args){
+        $json = $request->getBody();
+        $json_id = json_decode($json,true);
+        $onjetoProducto=new Productos;
+        $descripcionProductos=$onjetoProducto->buscarEliminar($json_id['id_producto']);
+        $response->getBody()->write(json_encode($descripcionProductos));
+        return $response;
+    }
+    public  function retornarActualizacion($request,$response,$args){
+        $json = $request->getBody();
+        $json_id = json_decode($json,true);
+        $onjetoProducto=new Productos;
+        $descripcionProductos=$onjetoProducto->buscarActualizacion($json_id['id_producto']);
+        $response->getBody()->write(json_encode($descripcionProductos));
+        return $response;
+    }
+
+
+
 }
 
 
