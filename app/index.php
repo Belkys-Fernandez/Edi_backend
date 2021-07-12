@@ -53,8 +53,8 @@ $app->group('/Productos', function (RouteCollectorProxy $group){
     $group->get('/ProductosPorId/{Id}',\ProductosController::class.':retornarProductosPorId');
     //verificar con el prof.
     $group->post('/descripcionProducto',\ProductosController::class.':retornarProductosDescripcion');
-    $group->delete('/borrar_producto',\ProductosController::class.':retornarEliminacion');
-    $group->put('/actualizar_producto',\ProductosController::class.':retornarActualizacion');
+    $group->delete('/borrarProducto',\ProductosController::class.':retornarEliminacion');
+    $group->put('/actualizarProducto',\ProductosController::class.':retornarActualizacion');
     
    
 });
