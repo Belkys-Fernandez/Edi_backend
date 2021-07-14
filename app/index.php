@@ -20,6 +20,7 @@ require __DIR__ . '/Controllers/ContactoController.php';
 require __DIR__ . '/Entidades/Productos.php';
 require __DIR__ . '/Entidades/Proveedores.php';
 require __DIR__ . '/Entidades/Contacto.php';
+
 use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable('../');
 $dotenv->load();
