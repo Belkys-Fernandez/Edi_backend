@@ -58,12 +58,12 @@ $app->group('/Productos', function (RouteCollectorProxy $group){
     //verificar con el prof.
     $group->post('/descripcionProducto',\ProductosController::class.':retornarProductosDescripcion');
     $group->delete('/borrarProducto',\ProductosController::class.':retornarEliminacion');
-    $group->put('/actualizarProducto',\ProductosController::class.':retornarActualizacion');
+    $group->post('/actualizarProducto',\ProductosController::class.':retornarActualizacion');
     
    
 });
 
-$app->group('/Productos', function (RouteCollectorProxy $group){
+$app->group('/Contacto', function (RouteCollectorProxy $group){
 
 
 
